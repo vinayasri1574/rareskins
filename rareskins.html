@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RareSkins</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #DFB6B3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #5D3C62;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            margin-right: 15px;
+            width: 200px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: #5D3C62;
+        }
+
+        .navbar-menu .cta-button {
+            background-color: #5D3C62;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(116, 26, 177, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-menu .cta-button:hover {
+            background-color: #b9a7a5;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: url('2.png') no-repeat center center/cover;
+            color: #DFB6B3;
+            text-shadow: rgba(116, 26, 177, 0.3);
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            color: #DFB6B3;
+        }
+
+        .hero-content p {
+            font-size: 25px;
+            margin-top: 10px;
+            color: #fbe4d9;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .icon {
+            text-align: center;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .icon p {
+            font-size: 0.9em;
+        }
+
+        .cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #7B456A;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #dfb6b3;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: white;
+                padding: 10px 20px;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-icons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="rlogo.png" alt="Logo" width="50">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="navbar-menu" id="navbar-menu">
+            <a href="#">Benefits Of LHR</a>
+            <a href="#">Products</a>
+            <a href="#">Treatments</a>
+            <a href="#">Technology</a>
+            <a href="#">Our Services</a>
+            <a href="#" class="cta-button">Talk To Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>HAIR REMOVAL<br> <span>REDEFINED AT HOME</span></h1>
+            <p>No More Monthly Hair Removal Fuss.</p>
+            <div class="hero-icons">
+                <div class="icon icon1">
+                    <img src="icon1.webp" alt="Forever Ready Icon">
+                    <p><strong>FOREVER READY</strong><br>With Zero Prep</p>
+                </div>
+                <div class="icon icon2">
+                    <img src="icon2.webp" alt="Smooth Skin Icon">
+                    <p><strong>SMOOTH SKIN</strong><br>No more ingrown hair, bumps, and stubble</p>
+                </div>
+                <div class="icon icon3">
+                    <img src="icon3.webp" alt="Painless Icon">
+                    <p><strong>PAINLESS</strong><br>Ice cool tech for a pain-free experience</p>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <p>Try 1st LHR Session at Just ₹555/-</p>
+                <a href="#" class="cta-button">Book a Trial Session</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
